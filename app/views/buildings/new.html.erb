@@ -34,6 +34,12 @@
   </div>
 
   <div>
+    <%=f.label :owner_id, "Owner" %>
+    <%= f.collection_select :owner_id, 
+      Owner.all, :id, :last_name, prompt: true %>
+  </div>
+
+  <div>
     <%= f.submit 'Record' %>
   </div>
   

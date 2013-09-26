@@ -1,6 +1,8 @@
 require 'spec_helper'
 
 describe Building do
+  
+
   it { should have_valid(:street_address).when('1311 South Street', '309 South Street') }
   it { should_not have_valid(:street_address).when('', nil) }
 

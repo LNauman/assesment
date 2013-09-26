@@ -1,0 +1,35 @@
+<% if @owner.errors.size > 0 %>
+  <ul class="errors" >
+    <% @owner.errors.full_messages.each do |error| %>
+      <li><%= error %></li>
+    <% end %>
+  </ul>    
+<% end %>
+
+<%= form_for @owner do |f| %>
+ 
+  <div>
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %>
+  </div>
+
+  <div>
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name %>
+  </div>
+
+  <div>
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+
+  <div>
+    <%= f.label :company %>
+    <%= f.text_field :company %>
+  </div>
+
+  <div>
+    <%= f.submit 'Record' %>
+  </div>
+
+<% end %>
