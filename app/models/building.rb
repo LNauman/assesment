@@ -9,7 +9,11 @@ class Building < ActiveRecord::Base
   validates_presence_of :street_address
   validates_presence_of :city
   validates_presence_of :state
-  #sdfsfs
+  # I didn't realize we needed to make a feature branch for the first part
+  # of the assignment so I had to add this comment to make a change
+  # so the files would be different and I could actually issue a pull request.
+  # The assignment is just in the reqular repo, I will make a feature branch 
+  # for the second phase of the exam.
   
 
   validates_numericality_of :postal_code, 
