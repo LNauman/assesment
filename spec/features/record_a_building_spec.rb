@@ -37,7 +37,7 @@ feature 'record a building', %Q{
       fill_in 'Street address', with: '1311 South Street'
       fill_in 'City', with: 'Philadelphia'
       select 'PA', from: 'State'
-      fill_in 'Postal code', with: 19147
+      fill_in 'Postal code', with: '19147'
       fill_in 'Description', with: 'Exposed brick throughout!'
       select 'Sagget', from: 'Owner'
 

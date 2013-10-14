@@ -18,12 +18,14 @@ class Building < ActiveRecord::Base
   # The assignment is just in the reqular repo, I will make a feature branch 
   # for the second phase of the exam.
   
+  validates_length_of :postal_code,
+    :minimum => 5, :maximum => 5, allow_blank: false
 
-  validates_numericality_of :postal_code, 
-    allow_blank: false, 
-    only_integer: true,
-    greater_than_or_equal_to: 10000,
-    less_than_or_equal_to: 99999
+  # validates_numericality_of :postal_code, 
+  #   allow_blank: false, 
+  #   only_integer: true,
+  #   greater_than_or_equal_to: 10000,
+  #   less_than_or_equal_to: 99999
 
   validates_inclusion_of :state, in: STATES
 
